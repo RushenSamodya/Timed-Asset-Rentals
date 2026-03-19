@@ -1,0 +1,7 @@
+{
+  "appName": "Asset Rental Contract",
+  "version": "1.0.0",
+  "rentalDefaults": {
+    "maxDurationSeconds": 86400
+  }
+}

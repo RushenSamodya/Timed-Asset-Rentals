@@ -1,0 +1,15 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y nodejs npm
+
+WORKDIR /asset-rental-contract
+
+RUN rm -rf ./*
+
+COPY package*.json /asset-rental-contract
+
+RUN npm install
+
+COPY src /asset-rental-contract/src/
+
+RUN npm run buildLinux
